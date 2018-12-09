@@ -9,13 +9,13 @@ var computerGuess = [];
 window.onload = function() {
 	var compGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 	computerGuess.push(compGuess);
-	console.log(computerGuess[0]);
+
 }
 
 document.onkeyup = function(event) {
 	var playerGuess = event.key;
 	lettersGuessed.push(playerGuess);
-	console.log(computerGuess[0]);
+
 
 if ((playerGuess === computerGuess[0]) && (guessesLeft > 0)) {
 	wins++;
@@ -24,7 +24,7 @@ if ((playerGuess === computerGuess[0]) && (guessesLeft > 0)) {
 	computerGuess.length = 0;
 	var compGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 	computerGuess.push(compGuess);
-	console.log(computerGuess[0]);
+
 }
 
 else if ((playerGuess !== computerGuess[0]) && (guessesLeft > 0)) {
@@ -38,7 +38,7 @@ else {
 	computerGuess.length = 0;
 	var compGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 	computerGuess.push(compGuess);
-	console.log(computerGuess[0]);
+
 }
 
 var html = "<p>Guess what letter I'm thinking of!</p>" +
